@@ -16,7 +16,7 @@ brew install bash-completion
 # brew install chruby
 # brew install cloc
 # brew install crystal
-# brew install ctags
+brew install ctags
 # brew install diff-so-fancy
 brew install direnv
 # brew install duti
