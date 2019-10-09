@@ -22,8 +22,8 @@ export REPO_DOTFILES=34.1.0
 export FONT_FOLDER="$HOME/Library/Fonts"
 
 export SOURCE_CODE_PRO_URL="https://github.com/adobe-fonts/source-code-pro/releases/download/2.030R-ro%2F1.050R-it/source-code-pro-2.030R-ro-1.050R-it.zip"
-export SOURCE_CODE_PRO_PATH="TTF/*.ttf"
-export SOURCE_CODE_PRO_FOLDER="$FONT_FOLDER/SourceCodePro"
+export SOURCE_CODE_PRO_PATH="source-code-pro-2.030R-ro-1.050R-it/TTF/"
+export SOURCE_CODE_PRO_FOLDER="$FONT_FOLDER/SourceCodePro/"
 
 
 # Applications
