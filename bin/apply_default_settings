@@ -1,6 +1,10 @@
 #! /usr/bin/env bash
 
 # Applies system and application defaults.
+# To find these, try:
+# 1) `defaults read > /tmp/before`
+# 2) Change the setting manually
+# 3) `defaults read > /tmp/after && opendiff /tmp/before /tmp/after && rm /tmp/before && rm /tmp/after`
 
 printf "%s\n" "System - Quiet boot sound effects."
 sudo nvram SystemAudioVolume="%5"
@@ -8,8 +12,8 @@ sudo nvram SystemAudioVolume="%5"
 printf "%s\n" "System - Enable verbose boot."
 sudo nvram boot-args="-v"
 
-printf "%s\n" "System - Reveal IP address, hostname, OS version, etc. when clicking login window clock."
-sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
+# printf "%s\n" "System - Reveal IP address, hostname, OS version, etc. when clicking login window clock."
+# sudo defaults write /Library/Preferences/com.apple.loginwindow AdminHostInfo HostName
 
 printf "%s\n" "System - Expand save panel by default."
 defaults write NSGlobalDomain NSNavPanelExpandedStateForSaveMode -bool true
@@ -178,17 +182,14 @@ defaults write com.apple.appstore WebKitDeveloperExtras -bool true
 printf "%s\n" "App Store - Enable Debug Menu in the Mac App Store."
 defaults write com.apple.appstore ShowDebugMenu -bool true
 
-do shell script ¬
-        "defaults write com.apple.finder NSUserKeyEquivalents " & ¬
-        "-dict 'New Finder Window' '@$N' 'New Folder' '@N';"
-
-tell application "Finder" to quit
-delay 1 -- 1 second pause
-tell application "Finder" to launch
+defaults write com.apple.finder NSUserKeyEquivalents -dict 'New Finder Window' '@$N' 'New Folder' '@N';
 
 defaults write com.apple.Dock pinning start
 defaults write com.apple.dock orientation right
 defaults write com.apple.dock showforeground -boolean yes
 defaults write com.apple.Dock showhidden -boolean yes
-defaults write "Apple Global Domain" AppleScrollBarVariant DoubleBoth
+defaults write NSGlobalDomain AppleScrollBarVariant DoubleBoth
 defaults write com.apple.diskcopy expert-mode 1
+
+killall Finder
+killall Dock
