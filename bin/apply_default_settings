@@ -191,5 +191,9 @@ defaults write com.apple.Dock showhidden -boolean yes
 defaults write NSGlobalDomain AppleScrollBarVariant DoubleBoth
 defaults write com.apple.diskcopy expert-mode 1
 
+defaults write com.apple.universalaccessAuthWarning "/Applications/Jumpcut.app" 1
+defaults write com.apple.universalaccessAuthWarning "/Applications/Jumpcut.app/Contents/MacOS/Jumpcut" 1
+defaults write com.apple.universalaccessAuthWarning "net.sf.Jumpcut" 1
+
 killall Finder
 killall Dock
