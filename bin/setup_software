@@ -32,8 +32,15 @@ chsh -s /usr/local/bin/bash
 
 # Dotfiles
 rm -f $HOME/.bash_profile
-mkdir -p $HOME/Developer
-install_git_project "https://gitlab.com/mbaltaks/dotfiles.git" "master" "$HOME/Developer/dotfiles" "./install"
+
+DEV_FOLDER=$HOME/Developer
+mkdir -p $DEV_FOLDER
+cd $DEV_FOLDER
+# if dotfiles already exists, update instead of clone
+git clone --recurse-submodules "https://github.com/mbaltaks/dotfiles.git"
+cd dotfiles
+./install
+# install_git_project "https://github.com/mbaltaks/dotfiles.git" "master" "$HOME/Developer/dotfiles" "./install"
 source $HOME/.bashrc
 
 # Yarn Setup
