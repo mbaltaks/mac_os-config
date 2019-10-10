@@ -39,6 +39,7 @@ cd $DEV_FOLDER
 # if dotfiles already exists, update instead of clone
 git clone --recurse-submodules "https://github.com/mbaltaks/dotfiles.git"
 cd dotfiles
+touch gitconfig_local
 ./install
 # install_git_project "https://github.com/mbaltaks/dotfiles.git" "master" "$HOME/Developer/dotfiles" "./install"
 source $HOME/.bashrc
