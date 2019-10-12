@@ -2,17 +2,7 @@
 
 # Sets up and launches (if necessary) installed software.
 
-# Bash
-sudo bash -c "printf '/usr/local/bin/bash\n' >> /etc/shells"
-
-# Bash Completion
-chsh -s /usr/local/bin/bash
-
-# Homebrew
-(
-  cd /usr/local/Homebrew
-  git config --local core.hooksPath /dev/null
-)
+chsh -s /bin/zsh
 
 # asdf / spack
 
