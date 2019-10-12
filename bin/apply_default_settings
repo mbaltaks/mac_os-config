@@ -6,8 +6,8 @@
 # 2) Change the setting manually
 # 3) `defaults read > /tmp/after && opendiff /tmp/before /tmp/after && rm /tmp/before && rm /tmp/after`
 
-printf "%s\n" "System - Quiet boot sound effects."
-sudo nvram SystemAudioVolume="%5"
+# printf "%s\n" "System - Quiet boot sound effects."
+# sudo nvram SystemAudioVolume="%5"
 
 printf "%s\n" "System - Enable verbose boot."
 sudo nvram boot-args="-v"
@@ -109,8 +109,8 @@ defaults write com.apple.finder WarnOnEmptyTrash -bool false
 printf "%s\n" "Finder - Allow text selection in Quick Look."
 defaults write com.apple.finder QLEnableTextSelection -bool true
 
-printf "%s\n" "iOS Simulator - Symlink the iOS Simulator application."
-sudo ln -sf "/Applications/Xcode.app/Contents/Applications/iPhone Simulator.app" "/Applications/iOS Simulator.app"
+# printf "%s\n" "iOS Simulator - Symlink the iOS Simulator application."
+# sudo ln -sf "/Applications/Xcode.app/Contents/Applications/iPhone Simulator.app" "/Applications/iOS Simulator.app"
 
 printf "%s\n" "Safari - Set home page to 'about:blank' for faster loading."
 defaults write com.apple.Safari HomePage -string "about:blank"
