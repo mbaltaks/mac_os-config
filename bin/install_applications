@@ -4,6 +4,7 @@
 
 install_zip_path "$SOURCE_CODE_PRO_URL" "$SOURCE_CODE_PRO_PATH" "$SOURCE_CODE_PRO_FOLDER"
 install_git_project "https://github.com/stackia/solarized-xcode.git" "master" "solarized-xcode" "./install.sh"
+install_git_project "https://github.com/tomislav/osx-terminal.app-colors-solarized.git" "master" "osx-terminal.app-colors-solarized" "open *.terminal"
 
 # install_dmg_app "$AUDIO_BRIDGE_APP_URL" "$AUDIO_BRIDGE_VOLUME_NAME" "$AUDIO_BRIDGE_APP_NAME"
 # install_dmg_app "$AURORA_BLU_RAY_COPY_APP_URL" "$AURORA_BLU_RAY_COPY_VOLUME_NAME" "$AURORA_BLU_RAY_COPY_APP_NAME"
