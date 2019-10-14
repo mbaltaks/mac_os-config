@@ -2,7 +2,7 @@
 
 # Sets up and launches (if necessary) installed software.
 
-chsh -s /bin/zsh
+# chsh -s /bin/zsh
 
 # asdf / spack
 
@@ -21,7 +21,7 @@ chsh -s /bin/zsh
 # fi
 
 # Dotfiles
-rm -f $HOME/.bash_profile
+# rm -f $HOME/.bash_profile
 
 DEV_FOLDER=$HOME/Developer
 mkdir -p $DEV_FOLDER
@@ -32,7 +32,7 @@ cd dotfiles
 touch gitconfig_local
 ./install
 # install_git_project "https://github.com/mbaltaks/dotfiles.git" "master" "$HOME/Developer/dotfiles" "./install"
-source $HOME/.bashrc
+# source $HOME/.bashrc
 
 # Yarn Setup
 # install_git_project "https://github.com/bkuhlmann/yarn_setup.git" $REPO_YARN_SETUP "yarn_setup" "bin/run i"

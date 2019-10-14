@@ -4,14 +4,14 @@
 
 if ! command -v brew > /dev/null; then
   ruby -e "$(curl --location --fail --silent --show-error https://raw.githubusercontent.com/Homebrew/install/master/install)"
-  export PATH="/usr/local/bin:$PATH"
-  printf "export PATH=\"/usr/local/bin:$PATH\"\n" >> $HOME/.bash_profile
+#   export PATH="/usr/local/bin:$PATH"
+#   printf "export PATH=\"/usr/local/bin:$PATH\"\n" >> $HOME/.bash_profile
 fi
 
 # brew install asciinema
 brew install asdf
-brew install bash
-brew install bash-completion
+# brew install bash
+# brew install bash-completion
 # brew install bat
 # brew install certbot
 # brew install chruby
@@ -19,7 +19,7 @@ brew install bash-completion
 # brew install crystal
 brew install ctags
 # brew install diff-so-fancy
-brew install direnv
+# brew install direnv
 # brew install duti
 # brew install elm
 # brew install entr
@@ -29,7 +29,7 @@ brew install exa
 # brew install ffsend
 # brew install flac
 # brew install fzf
-brew install git
+# brew install git
 # brew install gpg
 # brew install graphicsmagick
 # brew install graphviz
@@ -54,7 +54,7 @@ brew install mas
 # brew install node
 # brew install noti
 # brew install nushell
-brew install openssl
+# brew install openssl
 # brew install overmind
 # brew install pandoc
 # brew install parallel
