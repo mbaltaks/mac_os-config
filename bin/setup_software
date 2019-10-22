@@ -2,7 +2,7 @@
 
 # Sets up and launches (if necessary) installed software.
 
-# chsh -s /bin/zsh
+chsh -s /bin/zsh
 
 # asdf / spack
 
