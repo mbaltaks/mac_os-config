@@ -196,5 +196,7 @@ defaults write com.apple.universalaccessAuthWarning "/Applications/Jumpcut.app" 
 defaults write com.apple.universalaccessAuthWarning "/Applications/Jumpcut.app/Contents/MacOS/Jumpcut" 1
 defaults write com.apple.universalaccessAuthWarning "net.sf.Jumpcut" 1
 
+defaults write -g NSToolbarTitleViewRolloverDelay -float 0
+
 killall Finder
 killall Dock
